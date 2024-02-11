@@ -1,0 +1,73 @@
+.mainscreen{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: white 1px 1px 100px;
+}
+
+.mainscreen h1{
+    font-size: 3em;
+    color: black;
+    text-shadow: rgb(44, 35, 35) 1px 1px 100px;
+    text-align:center;
+}
+.mainscreen h1 span{
+    color: rgb(252, 2, 252);
+    text-shadow: white 1px 1px 100px;
+    
+    /* background: rgb(189, 167, 167); */
+    text-shadow: white 1px 1px 100px;
+}
+
+.mainscreen a{
+    text-decoration: none;
+    background: none;
+    font-size: 1.5em;
+    margin-top: 60px;    
+    border: 1px solid purple;
+    padding: 10px 20px;
+    border-radius: 60px;
+    color: purple;
+    box-shadow: 1px 1px 50px gray;
+    transition: all 0.4s ease-in-out;
+    white-space: wrap;
+}
+
+.mainscreen a:hover{
+    background: white;
+    color: black;
+}
+
+
+
+@media screen and (max-width:800px) {
+    .mainscreen h1{
+        width: 80%;
+        font-size: 2em;
+    }
+    
+    .mainscreen a{
+        width: 50%;
+        font-size: 1em;
+        text-align: center;
+    }
+}
+@media screen and (max-width:525px) {
+    .mainscreen h1{
+        font-size: 30px;
+    }
+
+    .mainscreen a{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:331px) {
+
+    .mainscreen a{
+        font-size: 18px;
+    }
+}

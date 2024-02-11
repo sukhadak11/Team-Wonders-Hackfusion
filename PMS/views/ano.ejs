@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Css Linkup -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bootstrap LinkUp -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    h3{
+       margin-left: 10px;
+    }
+    
+</style>
+</head>
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <!-- <img src="" class="ins-img" alt="profile"> -->
+            <h3>profile</h3>
+
+            <input type="text" class="search-box" placeholder="search">
+            <div class="nav-items">
+                <!-- <img src="assets/img/home.PNG" class="icon" alt=""> -->
+                <img src="assets/img/messenger.PNG" class="icon" alt="">
+                <img data-bs-toggle="modal" data-bs-target="#post-add-modal" src="assets/img/add.PNG" class="icon" alt="">
+                <!-- <img src="assets/img/explore.PNG" class="icon" alt=""> -->
+                <!-- <img src="assets/img/like.PNG" class="icon" alt=""> -->
+                <div class="icon user-profile"></div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main">
+        <div class="wrapper">
+            <div class="left-col">
+                <div class="status-wrapper">
+                    <% posts.forEach(post => { %>
+                    <div class="status-card">
+                        <div class="profile-pic"><img src="<%= post.profilePic %>" alt=""></div>
+                        <p class="username"><%= post.username %></p>
+                    </div>
+                    <% }); %>
+                </div>
+                
+                <!-- First Post -->
+                <div class="all-post">
+                    <% posts.forEach(post => { %>
+                    <div class="post">
+                        <div class="post-author">
+                            <div class="profile-pic"><img src="<%= post.authorPhoto %>" alt=""></div>
+                            <p class="author-name"><%= post.authorName %></p>
+                        </div>
+                        <div class="post-content">
+                            <p><%= post.content %></p>
+                            <img src="<%= post.photo %>" alt="">
+                        </div>
+                        <div class="post-footer">
+                            <p><%= post.date %></p>
+                            <!-- Add Edit/Delete buttons or any other actions here -->
+                        </div>
+                    </div>
+                    <% }); %>
+                </div>
+            </div>
+            
+            <!-- Sidebar Section Start --> 
+            <div class="right-col">
+                <% suggestions.forEach(suggestion => { %>
+                <div class="profile-card">
+                    <div class="profile-pic"><img src="<%= suggestion.profilePic %>" alt=""></div>
+                    <div>
+                        <p class="username"><%= suggestion.username %></p>
+                        <p class="sub-text"><%= suggestion.subText %></p>
+                    </div>
+                    <!-- Add Follow button or any other actions here -->
+                </div>
+                <% }); %>
+            </div>
+            <!-- Sidebar Section End -->
+        </div>
+    </section>
+
+    <!-- create Post Modal Start -->
+    <div class="modal fade" id="post-add-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2>Create Post</h2>
+                    <hr>
+                    <div class="msg"></div>
+                    <form id="post_add_form">
+                        <div class="my-3">
+                            <label for="">Author Name</label>
+                            <input name="aname" type="text" class="form-control">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Author Profile Photo</label>
+                            <input name="aphoto" type="text" class="form-control">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Post Content</label>
+                            <textarea name="pcontent" class="form-control" placeholder="Write a caption..."></textarea>
+                        </div>
+                        <div class="my-3">
+                            <label for="">Post Photo</label>
+                            <input name="pphoto" type="text" class="form-control">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Please Mention Your Post Date</label>
+                            <input name="pdate" type="date" class="form-control">
+                        </div>
+                        <div class="my-3">
+                            <input type="submit" class="btn btn-primary w-100" value="Create Post">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- create Post Modal End  -->
+
+
+    <!-- Edit Modal Start -->
+    <!-- Edit Modal -->
+   <div class="modal fade" id="edit-modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Your Post</h2>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="msg"></div>
+                <form action="" id="edit_post">
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+   </div>
+    <!-- Edit Modal End -->
+
+    
+    <!-- JavaScript Linkup -->
+    <script src="assets/js/function.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

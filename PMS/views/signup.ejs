@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="./signup.css">
+</head>
+
+<body>
+
+
+    <div class="login">
+        <form action="/signup" name="form1" method="post" class="login__form" onsubmit="return validateForm()">
+            <h1 class="login__title">Sign Up</h1>
+
+            <div class="login__inputs">
+                <div class="login__box">
+                    <input placeholder=" Full Name" class="login__input" id="name" type="text" name="name" required>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+
+                <div class="login__box">
+                    <input type="tel" name="phoneno" placeholder="Phone No" class="login__input" id="number"
+                        required>
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <div class="login__box">
+                    <input type="email" name="email" placeholder="Email ID" class="login__input" id="email" required>
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+
+                <div class="login__box">
+                    <input type="password" name="password" placeholder="Password" class="login__input" id="password"
+                        required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="login__box">
+                    <input type="file" id="myFile" name="filename">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+            </div>
+
+            <button type="submit" class="login__button" id="submit">Sign Up</button>
+            <button type="reset" class="login__button" value="reset">Reset</button>
+
+            <div class="login__register">
+                Already have an account?<a href="/login">Sign In</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.forms["form1"]["name"].value;
+            var phone = document.forms["form1"]["phoneno"].value;
+            var phonenoPattern = /^\d{10}$/;
+
+            if (!/^[a-zA-Z]+$/.test(name)) {
+                alert("Name must contain only alphabets");
+                return false;
+            }
+
+            if (!phonenoPattern.test(phone)) {
+                alert("Phone number must be 10 digits");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>

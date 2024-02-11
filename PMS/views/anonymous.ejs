@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account Types</title>
+    <link rel="stylesheet" type="text/css" href="/styles/anonymous.css">
+</head>
+<body>
+
+<div class="account-section">
+    <h2>Account Type 1: Offensive Language Verification</h2>
+    <p>In this type of account, the platform must verify offensive language before posting anything.</p>
+    <button onclick="postWithLanguageVerification()">Post</button>
+</div>
+
+<div class="account-section">
+    <h2>Account Type 2: Media Posting with Verification</h2>
+    <p>Under this account, the user can post any image, audio, or video. It must be verified by the platform, and if it is offensive, it must be restricted. Other users can comment and like the post.</p>
+    <button onclick="postMedia()">Post Media</button>
+</div>
+
+<div class="account-section">
+    <h2>Account Type 3: Anonymous Complaints/Suggestions</h2>
+    <p>Under this account, the user can make any type of complaint or give any suggestion. The identity of the user must be hidden from all other users.</p>
+    <button onclick="submitComplaint()">Submit Complaint/Suggestion</button>
+</div>
+
+<script src="/scripts/anonymous.js"></script>
+
+</body>
+</html>

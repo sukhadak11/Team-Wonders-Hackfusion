@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <!-- Css Linkup -->
+    <!-- <link rel="stylesheet" href="/assets/css/styles.css"> -->
+
+    <!-- Bootstrap LinkUp -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        h3 {
+            margin-left: 10px;
+        }
+        
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+body{
+    width: 100%;
+    background: #fafafa;
+    position: relative;
+    font-family: 'roboto', sans-serif;
+}
+
+
+/* Navbar Start */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border-bottom: 1px solid #dfdfdf;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.nav-wrapper{
+    width: 70%;
+    max-width: 1344px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ins-img{
+    height: 100%;
+    margin-top: 7px;
+    margin-left: 425px;
+}
+
+.search-box{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 25px;
+    background: #fafafa;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 7px;
+}
+
+.search-box::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-items{
+    height: 22px;
+    position: relative;
+    margin-right: -65px;
+}
+
+.icon{
+    height: 100%;
+    cursor: pointer;
+    margin: -7px 10px;
+    display: inline-block;
+}
+
+.user-profile{
+    width: 22px;
+    border-radius: 50%;
+    background-image: url(../img/peofile.jpg);
+    background-size: cover;
+}
+/* Navbar End */
+
+/* Story Section Start */
+.main {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.wrapper {
+    width: 70%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 30px;
+    margin-top: -50px;
+}
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.status-wrapper {
+    width: 100%;
+    height: 120px;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+    padding: 10px;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.status-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.status-card {
+    flex: 0 0 auto;
+    width: 80px;
+    max-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.profile-pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 3px;
+    background: linear-gradient(45deg, rgb(255, 230, 0), rgb(255, 0, 128) 80%);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.username {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 0.5);
+}
+/* Story Section End */
+
+/* Post Section Start */
+.post  {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    margin-top: 20px;
+}
+
+.info{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.info .username {
+    width: auto;
+    font-weight: bold;
+    color: #000;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.info .options {
+    height: 10px;
+    cursor: pointer;
+}
+
+.info .user {
+    display: flex;
+    align-items: center;
+}
+
+.info .profile-pic {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    background: none;
+}
+
+.info .profile-pic img{
+    border: none;
+}
+
+.post-image{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.post-content{
+    width: 100%;
+    padding: 20px;
+}
+
+.likes{
+    font-weight: bold;
+}
+
+.description{
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.description span{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.post-time{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+}
+
+.comment-wrapper{
+    width: 100%;
+    height: 50px;
+    border-radius: 1px solid #dfdfdf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-wrapper .icon{
+    height: 30px;
+}
+
+.comment-box{
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.comment-btn,
+.action-btn{
+    width: 70px;
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: rgb(0, 162, 255);
+    opacity: 0.5;
+}
+
+.reaction-wrapper{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-top: -20px;
+    align-items: center;
+}
+
+.reaction-wrapper .icon{
+    height: 25px;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.reaction-wrapper .icon.save{
+    margin-left: auto;
+}
+
+.post2  {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    margin-top: 10px;
+}
+/* Post Section End */
+
+
+/* Sidebar Section Start */
+.right-col{
+    padding: 20px;
+}
+
+.profile-card{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-card .profile-pic{
+    flex: 0 0 auto;
+    padding: 0;
+    background: none;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.profile-card:first-child .profile-pic{
+    width: 70px;
+    height: 70px;
+}
+
+.profile-card .profile-pic img{
+    border: none;
+}
+
+.profile-card .username{
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+    text-align: start;
+}
+
+.sub-text{
+    color: rgba(0, 0, 0, 0.5);
+    font-size:12px;
+    font-weight: 500;
+    margin-top: -10px;
+}
+
+.action-btn{
+    opacity: 1;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.suggestion-text{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+@media (max-width: 1100px){
+    .right-col, .search-box{
+        display: none;
+    }
+    .nav-wrapper,
+    .wrapper{
+        width: 90%;
+    }
+    .wrapper{
+        display: block;
+    }
+}
+
+@media (max-width: 500px){
+    .nav-items .icon{
+        margin: 0 5px;
+    }
+    .post-image{
+        height: 300px;
+    }
+}
+/* Sidebar Section End */
+
+
+/* Edit/ Delete Start */
+[type=button]:not(:enabled), [type=reset]:not(:enabled), [type=submit]:not(:enabled), button:not(:enabled) {
+    cursor: pointer;
+    border: none;
+    /* color: white; */
+    background: white;
+}
+
+.post a::after {
+    content: '';
+    display: none;
+    color: black;
+}
+
+.post i{
+    color: #000;
+}
+/* Edit/Delete End */
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <!-- <img src="" class="ins-img" alt="profile"> -->
+            <h3>profile</h3>
+
+            <input type="text" class="search-box" placeholder="search">
+            <div class="nav-items">
+                <!-- <img src="assets/img/home.PNG" class="icon" alt=""> -->
+                <img src="http://localhost:4000/assets/img/messenger.PNG" class="icon" alt="">
+                
+                <img data-bs-toggle="modal" data-bs-target="#post-add-modal" src="/assets/img/add.PNG" class="icon" alt="">
+                <!-- <img src="assets/img/explore.PNG" class="icon" alt=""> -->
+                <!-- <img src="assets/img/like.PNG" class="icon" alt=""> -->
+                <div class="icon user-profile"></div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main">
+        <div class="wrapper">
+            <div class="left-col">
+                <div class="status-wrapper">
+                    <div class="status-card">
+                        <!-- <div class="profile-pic"><img src="assets/img/payel.jpg" alt=""></div> -->
+                        <!-- <p class="username">payeeelll</p> -->
+                    </div>
+                    <div class="status-card">
+                        <!-- <div class="profile-pic"><img src="assets/img/nafir2.jpg" alt=""></div> -->
+                        <!-- <p class="username">naf1r_</p> -->
+                    </div>
+                    <div class="status-card">
+                        <!-- <div class="profile-pic"><img src="assets/img/pial.jpg" alt=""></div> -->
+                        <!-- <p class="username">hassan_pial</p> -->
+                    </div>
+                    <div class="status-card">
+                        <!-- <div class="profile-pic"><img src="assets/img/dristy.jpg" alt=""></div> -->
+                        <!-- <p class="username">maybedristy</p> -->
+                    </div>
+                    <div class="status-card">
+                        <!-- <div class="profile-pic"><img src="assets/img/tanveer.jpg" alt=""></div> -->
+                        <!-- <p class="username">tanveer__ahamed</p> -->
+                    </div>
+                    <div class="status-card">
+                        <!-- <div class="profile-pic"><img src="assets/img/rimi.jpg" alt=""></div> -->
+                        <!-- <p class="username">rima_akter_25</p> -->
+                    </div>
+                    <div class="status-card">
+                        <!-- <div class="profile-pic"><img src="assets/img/nadimvai.jpg" alt=""></div> -->
+                        <!-- <p class="username">ismail_hoss...</p> -->
+                    </div>
+                    <div class="status-card">
+                        <!-- <div class="profile-pic"><img src="assets/img/oh achha.jpg" alt=""></div> -->
+                        <!-- <p class="username">oh_achah...</p> -->
+                    </div>
+                </div>
+
+                <!-- First Post -->
+                <div class="all-post">
+
+                </div>
+            </div>
+            <!-- Story Section End -->
+
+            <!-- Sidebar Section Start -->
+            <div class="right-col">
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <img src="/assets/img/peofile.jpg" alt="">
+                    </div>
+                    <div>
+                        <p class="username">shrutika</p>
+                        <!-- <p class="sub-text">Md Obidur Rahman (Ovi)</p> -->
+                    </div>
+                    <button class="action-btn" onclick="location.href='ano.html';">switch</button>
+                </div>
+                <!-- <p class="suggestion-text">Suggestions for you</p> -->
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <!-- <img src="assets/img/kaiful.jpg" alt=""> -->
+                    </div>
+                    <div>
+                        <!-- <p class="username">kaiful_islam_safin</p>
+                    <p class="sub-text">Followed by __hasnat_ali_siddique_</p> -->
+                    </div>
+                    <!-- <button class="action-btn">follow</button> -->
+                </div>
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <!-- <img src="assets/img/pulp.jpg" alt=""> -->
+                    </div>
+                    <div>
+                        <!-- <p class="username">psychedelic_pulp</p>
+                    <p class="sub-text">New to Instagram</p> -->
+                    </div>
+                    <!-- <button class="action-btn">follow</button> -->
+                </div>
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <!-- <img src="assets/img/ijaj.jpg" alt=""> -->
+                    </div>
+                    <div>
+                        <!-- <p class="username">ijaj_emon_</p>
+                    <p class="sub-text">Followed by g.s.hasan + 2 more</p> -->
+                    </div>
+                    <!-- <button class="action-btn">follow</button> -->
+                </div>
+
+                <div class="modal fade" id="post-add-modal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h2>Create Post</h2>
+                                <hr>
+                                <div class="msg"></div>
+                                <form id="post_add_form">
+                                    <div class="my-3">
+                                        <label for="">Author Name</label>
+                                        <input name="aname" type="text" class="form-control">
+                                    </div>
+                                    <div class="my-3">
+                                        <label for="">Author Profile Photo</label>
+                                        <input name="aphoto" type="text" class="form-control">
+                                    </div>
+                                    <div class="my-3">
+                                        <label for="">Post Content</label>
+                                        <textarea name="pcontent" class="form-control"
+                                            placeholder="Write a caption..."></textarea>
+                                    </div>
+                                    <div class="my-3">
+                                        <label for="">Post Photo</label>
+                                        <input name="pphoto" type="text" class="form-control">
+                                    </div>
+                                    <div class="my-3">
+                                        <label for="">Please Mention Your Post Date</label>
+                                        <input name="pdate" type="date" class="form-control">
+                                    </div>
+                                    <div class="my-3">
+                                        <!-- <button type="button" class="btn btn-primary w-100">Create Post</button> -->
+                                        <input type="submit" class="btn btn-primary w-100" value="Create Post">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="edit-modal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>Edit Your Post</h2>
+                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="msg"></div>
+                                <form action="" id="edit_post">
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="/assets/js/function.js"></script>
+                <script src="/assets/js/main.js"></script>
+                <!-- JavaScript Bundle with Popper -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+                    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
